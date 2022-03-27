@@ -24,7 +24,7 @@ const HomeScreen = () => {
 const BottomTabNavigation = () => {
   return (
     <NavigationContainer>
-      <Tab.Navigator>
+      <Tab.Navigator >
         <Tab.Screen
           name="Home"
           component={HomeStack}
@@ -33,8 +33,8 @@ const BottomTabNavigation = () => {
             tabBarIcon: ({focused, color, size}) => (
               <Octicons
                 name="home"
-                size={24}
-                color="#4a4f51"
+                size={size}
+                color={color}
                 style={{}}
               />
             ),
@@ -49,8 +49,8 @@ const BottomTabNavigation = () => {
             tabBarIcon: ({focused, color, size}) => (
               <SimpleLineIcons
                 name="handbag"
-                size={25}
-                color="#4a4f51"
+                size={size}
+                color={color}
                 style={{}}
               />
             ),
@@ -64,8 +64,8 @@ const BottomTabNavigation = () => {
             tabBarIcon: ({focused, color, size}) => (
               <SimpleLineIcons
                 name="bell"
-                size={25}
-                color="#4a4f51"
+                size={size}
+                color={color}
                 style={{}}
               />
             ),
@@ -79,8 +79,8 @@ const BottomTabNavigation = () => {
             tabBarIcon: ({focused, color, size}) => (
               <Feather
                 name="shopping-cart"
-                size={25}
-                color="#4a4f51"
+                size={size}
+                color={color}
                 style={{}}
               />
             ),
@@ -94,8 +94,8 @@ const BottomTabNavigation = () => {
             tabBarIcon: ({focused, color, size}) => (
               <MaterialCommunityIcons
                 name="account"
-                size={25}
-                color="#4a4f51"
+                size={size}
+                color={color}
                 style={{}}
               />
             ),
