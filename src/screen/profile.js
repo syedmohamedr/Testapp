@@ -19,6 +19,7 @@ const Login = ({navigation}) => {
   const [number, setNumber] = useState('+91718786729');
   const [Email, setEmail] = useState('edgaryaan@gmail.com');
   const [name, setName] = useState('Edgaryaan');
+  const [value, setValue] = useState("");
 
   const toggleModal = () => {
     setModalVisible(!isModalVisible);
@@ -53,7 +54,7 @@ const Login = ({navigation}) => {
           style={{borderRadius: 50, alignSelf:"center", height: 100, width: 100}}
         />
         <View style={{justifyContent: 'center', marginRight: 10}}>
-          <Text style={styles.text}>{name}</Text>
+          <Text style={{alignSelf:"center",fontWeight:"bold"}}>{name}</Text>
           <Text style={styles.text}>{Email}</Text>
           <Text style={styles.text}>{number}</Text>
         </View>
@@ -140,7 +141,7 @@ const Login = ({navigation}) => {
           <View
             style={{
               backgroundColor: 'white',
-              height: '50%',
+              height: '60%',
               padding: 20,
               position: 'absolute',
               top: 0,
@@ -154,19 +155,19 @@ const Login = ({navigation}) => {
               />
               <TextInput
                 placeholder="Edgaryaan"
-                style={{borderWidth: 0.3, borderColor: 'black'}}
+                style={styles.textInput}
                 onChangeText={(e) => setName(e)}
               />
               {console.log('enter name',name)}
               <TextInput
                 placeholder="Edgaryaan@gmail.com"
-                style={{borderWidth: 0.3, borderColor: 'black'}}
+                style={styles.textInput}
                 onChangeText={(e) => setEmail(e)}
               />
               {console.log('enter email',Email)}
-              <TextInput
-                placeholder="+91-9656523364"
-                style={{borderWidth: 0.3, borderColor: 'black'}}
+              <PhoneInput
+                placeholder="9656523364"
+                style={styles.textInput}
                 onChangeText={(e) => setNumber(e)}
                 
               />
@@ -191,14 +192,7 @@ const Login = ({navigation}) => {
 };
 
 const styles = StyleSheet.create({
-  textInput: {
-    width: '80%',
-    height: 40,
-    borderRadius: 7,
-    borderWidth: 1,
-    borderColor: 'rgba(51, 52, 88, 0.06)',
-    left: '9%',
-  },
+ 
   touchable: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -210,6 +204,12 @@ const styles = StyleSheet.create({
   },
   text:{
     alignSelf:"center",
+    
+  },
+  textInput:{
+    borderWidth: 0.3,
+     borderColor: 'black',
+     margin:5
   },
 });
 export default Login;
